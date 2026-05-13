@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Developer — Кишинев | Moldova</title>
+  <meta name="description"
+    content="Ультрабыстрые сайты на чистом коде в Молдове. Разработка без конструкторов. Бесплатный хостинг навсегда." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================  MODAL  ============================ -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon-circle">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M6 16L13 23L26 9" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="modal-title" data-ru="Заявка отправлена!" data-ro="Cerere trimisă!">Заявка отправлена!</h3>
+      <p class="modal-text" data-ru="Свяжусь с вами в течение 30 минут в выбранном мессенджере."
+        data-ro="Vă voi contacta în 30 de minute prin mesagerul ales.">
+        Свяжусь с вами в течение 30 минут в выбранном мессенджере.
+      </p>
+      <button class="btn btn-primary btn-full" onclick="closeModal()">
+        <span data-ru="Отлично, жду!" data-ro="Super, aștept!">Отлично, жду!</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================  HEADER  ============================ -->
+  <header class="header">
+    <div class="header-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 12L7 4L11 9L13 6" stroke="white" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <span class="logo-text">Igrina</span>
+      </a>
+
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button id="btnRU" class="lang-btn lang-btn--active" onclick="setLang('ru')">RU</button>
+          <button id="btnRO" class="lang-btn" onclick="setLang('ro')">RO</button>
+        </div>
+        <a href="#contact" class="btn btn-primary">
+          <span data-ru="Связаться" data-ro="Contactați">Связаться</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================  HERO  ============================ -->
+  <section class="hero">
+    <div class="hero-blob hero-blob--top-right"></div>
+    <div class="hero-blob hero-blob--bottom-left"></div>
+
+    <div class="container hero-content">
+      <div class="grid-2">
+
+        <!-- Left: offer -->
+        <div>
+          <div class="section-label">
+            <span class="section-label-dot"></span>
+            <span data-ru="Кишинев, Молдова" data-ro="Chișinău, Moldova">Кишинев, Молдова</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="text-gradient" data-ru="Ультрабыстрые сайты на чистом коде"
+              data-ro="Site-uri ultrarapide pe cod curat">
+              Ультрабыстрые сайты на чистом коде
+            </span>
+            <br />
+            <span data-ru="в Молдове." data-ro="în Moldova.">в Молдове.</span>
+            <br />
+            <span class="hero-title-accent" data-ru="0 леев в месяц." data-ro="0 lei pe lună.">0 леев в месяц.</span>
+          </h1>
+
+          <p class="hero-subtitle"
+            data-ru="Разработка без конструкторов и тяжелых CMS. Вы платите только один раз за работу — хостинг навсегда бесплатный."
+            data-ro="Dezvoltare fără constructori și CMS grele. Plătiți o singură dată pentru muncă — găzduirea este gratuită pentru totdeauna.">
+            Разработка без конструкторов и тяжелых CMS. Вы платите только один раз за работу — хостинг навсегда
+            бесплатный.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <span data-ru="Получить консультацию" data-ro="Obține o consultație">Получить консультацию</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#pricing" class="btn btn-outline">
+              <span data-ru="Тарифы" data-ro="Tarife">Тарифы</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-value">50+</div>
+              <div class="stat-label" data-ru="Проектов" data-ro="Proiecte">Проектов</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">100</div>
+              <div class="stat-label">Google Speed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3+</div>
+              <div class="stat-label" data-ru="Года опыта" data-ro="Ani experiență">Года опыта</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: photo -->
+        <div class="photo-placeholder">
+
+          
+          <img src="images/2151043242.jpg" alt="Web Developer Character" width="400" height="480" fetchpriority="high"
+            loading="eager" class="w-full h-auto object-cover block relative z-10" />
+          <div class="photo-placeholder-inner">
+
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Vercel</span>
+              <span class="tech-tag">Netlify</span>
+              <span class="tech-tag tech-tag--accent">SEO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================  ADVANTAGES  ============================ -->
+  <section id="advantages" class="section">
+    <div class="container">
+
+      <div class="advantages-header">
+        <div class="section-label">
+          <span class="section-label-dot"></span>
+          <span data-ru="Почему я" data-ro="De ce eu">Почему я</span>
+        </div>
+        <h2 class="heading-lg" data-ru="Конкурентные преимущества" data-ro="Avantaje competitive">Конкурентные
+          преимущества</h2>
+        <p class="text-muted"
+          data-ru="Сайты на чистом коде работают иначе — быстрее, дешевле в обслуживании и лучше для SEO."
+          data-ro="Site-urile pe cod curat funcționează diferit — mai rapid, mai ieftin de întreținut și mai bune pentru SEO.">
+          Сайты на чистом коде работают иначе — быстрее, дешевле в обслуживании и лучше для SEO.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <!-- Card 1: Speed -->
+        <div class="glass-card advantage-card animate-on-scroll">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M13 3L16.5 9.5H23L18 14L20 21L13 17L6 21L8 14L3 9.5H9.5L13 3Z" stroke="#6366F1"
+                stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="advantage-card-title" data-ru="Скорость Google 100%" data-ro="Viteză Google 100%">Скорость Google
+            100%</h3>
+          <p class="advantage-card-text"
+            data-ru="Чистый HTML/CSS/JS без лишних зависимостей. Оценка PageSpeed Insights — 95–100. Ваш сайт грузится мгновенно на любом устройстве."
+            data-ro="HTML/CSS/JS curat fără dependențe inutile. Scor PageSpeed Insights — 95–100. Site-ul dvs. se încarcă instantaneu pe orice dispozitiv.">
+            Чистый HTML/CSS/JS без лишних зависимостей. Оценка PageSpeed Insights — 95–100. Ваш сайт грузится мгновенно
+            на любом устройстве.
+          </p>
+          <div class="advantage-card-footer">
+            <div class="speed-bar-wrapper">
+              <div class="speed-bar"></div>
+              <span class="speed-bar-score">100</span>
+            </div>
+            <div class="speed-bar-labels">
+              <span class="speed-bar-label">Performance</span>
+              <span class="speed-bar-label">PageSpeed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: SEO -->
+        <div class="glass-card advantage-card animate-on-scroll" style="transition-delay: 0.1s;">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <circle cx="13" cy="13" r="10" stroke="#6366F1" stroke-width="1.5" />
+              <path d="M7 13c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#6366F1" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M13 7c1.5 2 2 4 2 6s-.5 4-2 6" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M7 13h12" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="advantage-card-title" data-ru="Полная SEO-оптимизация" data-ro="Optimizare SEO completă">Полная
+            SEO-оптимизация</h3>
+          <p class="advantage-card-text"
+            data-ru="Семантическая HTML-разметка, мета-теги, Open Graph, микроразметка Schema.org и правильная структура заголовков."
+            data-ro="Marcare HTML semantică, meta-taguri, Open Graph, microdatele Schema.org și structura corectă a titlurilor.">
+            Семантическая HTML-разметка, мета-теги, Open Graph, микроразметка Schema.org и правильная структура
+            заголовков.
+          </p>
+          <div class="advantage-card-footer">
+            <ul class="checklist">
+              <li class="checklist-item">
+                <span class="checklist-icon">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span data-ru="Schema.org разметка" data-ro="Marcare Schema.org">Schema.org разметка</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span data-ru="Open Graph теги" data-ro="Taguri Open Graph">Open Graph теги</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Sitemap + robots.txt</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Hosting -->
+        <div class="glass-card advantage-card animate-on-scroll" style="transition-delay: 0.2s;">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <rect x="4" y="6" width="18" height="14" rx="2" stroke="#6366F1" stroke-width="1.5" />
+              <path d="M9 6V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1" stroke="#6366F1" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M8 13l3 3 7-7" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="advantage-card-title" data-ru="Хостинг бесплатно навсегда"
+            data-ro="Găzduire gratuită pentru totdeauna">Хостинг бесплатно навсегда</h3>
+          <p class="advantage-card-text"
+            data-ru="Деплой на Vercel или Netlify — 0 леев в месяц. SSL-сертификат, CDN и глобальная доставка включены. Никаких скрытых платежей."
+            data-ro="Deploy pe Vercel sau Netlify — 0 lei pe lună. Certificat SSL, CDN și livrare globală incluse. Fără plăți ascunse.">
+            Деплой на Vercel или Netlify — 0 леев в месяц. SSL-сертификат, CDN и глобальная доставка включены. Никаких
+            скрытых платежей.
+          </p>
+          <div class="advantage-card-footer">
+            <div class="tag-row">
+              <span class="card-tag">Vercel</span>
+              <span class="card-tag">Netlify</span>
+              <span class="card-tag card-tag--accent" data-ru="бесплатно" data-ro="gratis">бесплатно</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================  PRICING  ============================ -->
+  <section id="pricing" class="section">
+    <div class="container">
+
+      <div class="pricing-header">
+        <div class="section-label">
+          <span class="section-label-dot"></span>
+          <span data-ru="Тарифы" data-ro="Tarife">Тарифы</span>
+        </div>
+        <h2 class="heading-lg" data-ru="Прозрачные цены" data-ro="Prețuri transparente">Прозрачные цены</h2>
+        <p class="text-muted" data-ru="Никаких скрытых платежей. Вы точно знаете что получаете."
+          data-ro="Nicio plată ascunsă. Știți exact ce primiți.">
+          Никаких скрытых платежей. Вы точно знаете что получаете.
+        </p>
+      </div>
+
+      <div class="grid-3" style="align-items: start;">
+
+        <!-- Plan 1: Landing -->
+        <div class="glass-card pricing-card animate-on-scroll">
+          <p class="pricing-tier-label" data-ru="Старт" data-ro="Start">Старт</p>
+          <h3 class="pricing-card-name">Landing Page</h3>
+          <p class="pricing-card-desc" data-ru="Идеально для услуг" data-ro="Ideal pentru servicii">Идеально для услуг
+          </p>
+          <div class="pricing-price-row">
+            <span class="pricing-price-number">150</span>
+            <span class="pricing-price-currency">€</span>
+            <span class="pricing-price-from" data-ru="от" data-ro="de la">от</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="1 страница, до 7 секций" data-ro="1 pagină, până la 7 secțiuni">1 страница, до 7
+                секций</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Адаптивный дизайн" data-ro="Design responsive">Адаптивный дизайн</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Форма заявки" data-ro="Formular de cerere">Форма заявки</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="SEO-оптимизация" data-ro="Optimizare SEO">SEO-оптимизация</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Деплой на Vercel/Netlify" data-ro="Deploy pe Vercel/Netlify">Деплой на
+                Vercel/Netlify</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Готово за 3–5 дней" data-ro="Gata în 3–5 zile">Готово за 3–5 дней</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">
+            <span data-ru="Заказать" data-ro="Comandă">Заказать</span>
+          </a>
+        </div>
+
+        <!-- Plan 2: Insta-Catalog (POPULAR) -->
+        <div class="glass-card pricing-card pricing-card--popular animate-on-scroll" style="transition-delay: 0.1s;">
+          <div class="popular-badge">
+            <span data-ru="★ ТОП ПРОДАЖ" data-ro="★ TOP VÂNZĂRI">★ ТОП ПРОДАЖ</span>
+          </div>
+          <p class="pricing-tier-label pricing-tier-label--accent" data-ru="Популярный" data-ro="Popular">Популярный</p>
+          <h3 class="pricing-card-name" data-ru="Insta-Каталог" data-ro="Insta-Catalog">Insta-Каталог</h3>
+          <p class="pricing-card-desc" data-ru="Для Instagram-магазинов одежды и косметики"
+            data-ro="Pentru magazine Instagram de haine și cosmetice">Для Instagram-магазинов одежды и косметики</p>
+          <div class="pricing-price-row">
+            <span class="pricing-price-number">200</span>
+            <span class="pricing-price-currency">€</span>
+            <span class="pricing-price-from" data-ru="от" data-ro="de la">от</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Каталог товаров с фильтрами" data-ro="Catalog de produse cu filtre">Каталог товаров с
+                фильтрами</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Интеграция с Instagram" data-ro="Integrare cu Instagram">Интеграция с Instagram</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="WhatsApp / Telegram заказ" data-ro="Comandă WhatsApp / Telegram">WhatsApp / Telegram
+                заказ</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Галерея + lightbox" data-ro="Galerie + lightbox">Галерея + lightbox</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="SEO + скорость 100%" data-ro="SEO + viteză 100%">SEO + скорость 100%</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Готово за 5–7 дней" data-ro="Gata în 5–7 zile">Готово за 5–7 дней</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">
+            <span data-ru="Заказать сейчас" data-ro="Comandă acum">Заказать сейчас</span>
+          </a>
+        </div>
+
+        <!-- Plan 3: Business -->
+        <div class="glass-card pricing-card animate-on-scroll" style="transition-delay: 0.2s;">
+          <p class="pricing-tier-label" data-ru="Премиум" data-ro="Premium">Премиум</p>
+          <h3 class="pricing-card-name" data-ru="Бизнес-Сайт" data-ro="Site de Afaceri">Бизнес-Сайт</h3>
+          <p class="pricing-card-desc" data-ru="Многостраничные решения с кастомным функционалом"
+            data-ro="Soluții multipagini cu funcționalitate personalizată">Многостраничные решения с кастомным
+            функционалом</p>
+          <div class="pricing-price-row">
+            <span class="pricing-price-number">350</span>
+            <span class="pricing-price-currency">€</span>
+            <span class="pricing-price-from" data-ru="от" data-ro="de la">от</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="До 10+ страниц" data-ro="Până la 10+ pagini">До 10+ страниц</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Личный кабинет / CRM" data-ro="Cont personal / CRM">Личный кабинет / CRM</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="API интеграции" data-ro="Integrări API">API интеграции</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Блог / новости" data-ro="Blog / știri">Блог / новости</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Аналитика и A/B тесты" data-ro="Analize și teste A/B">Аналитика и A/B тесты</span>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span>
+              <span data-ru="Техподдержка 3 месяца" data-ro="Suport tehnic 3 luni">Техподдержка 3 месяца</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">
+            <span data-ru="Обсудить проект" data-ro="Discutați proiectul">Обсудить проект</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================  EXTRA SERVICES  ============================ -->
+  <section id="extra-services" class="section">
+    <div class="container">
+
+      <div class="advantages-header">
+        <div class="section-label">
+          <span class="section-label-dot"></span>
+          <span data-ru="Дополнительно" data-ro="Suplimentar">Дополнительно</span>
+        </div>
+        <h2 class="heading-lg" data-ru="Дополнительные услуги" data-ro="Servicii suplimentare">Дополнительные услуги
+        </h2>
+        <p class="text-muted" data-ru="Полный пакет для запуска вашего бренда — от сайта до фирменного стиля."
+          data-ro="Pachet complet pentru lansarea brandului dvs. — de la site la identitate vizuală.">
+          Полный пакет для запуска вашего бренда — от сайта до фирменного стиля.
+        </p>
+      </div>
+
+      <div class="extra-services-grid">
+
+        <!-- Service 1: Logo -->
+        <div class="glass-card extra-service-card animate-on-scroll">
+          <div class="extra-service-icon-wrap">
+            <div class="icon-box" style="margin-bottom: 0;">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M13 4L16 10H22L17 14.5L19 21L13 17L7 21L9 14.5L4 10H10L13 4Z" stroke="#6366F1"
+                  stroke-width="1.5" stroke-linejoin="round" />
+                <circle cx="13" cy="13" r="3" stroke="#6366F1" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div class="extra-service-badge" data-ru="Дизайн" data-ro="Design">Дизайн</div>
+          </div>
+
+          <div class="extra-service-body">
+            <h3 class="extra-service-title" data-ru="Разработка логотипа" data-ro="Dezvoltarea unui logo">Разработка
+              логотипа</h3>
+            <p class="extra-service-text"
+              data-ru="Уникальный фирменный знак, отражающий характер вашего бизнеса. Передаю все исходники: AI, EPS, SVG, PNG с прозрачным фоном."
+              data-ro="Semn de marcă unic care reflectă caracterul afacerii dvs. Livrez toate sursele: AI, EPS, SVG, PNG cu fundal transparent.">
+              Уникальный фирменный знак, отражающий характер вашего бизнеса. Передаю все исходники: AI, EPS, SVG, PNG с
+              прозрачным фоном.
+            </p>
+
+            <ul class="extra-service-features">
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="3 концепции на выбор" data-ro="3 concepte la alegere">3 концепции на выбор</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="До 3 раундов правок" data-ro="Până la 3 runde de corecturi">До 3 раундов правок</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="Все форматы исходников" data-ro="Toate formatele surselor">Все форматы исходников</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="Готово за 3–4 дня" data-ro="Gata în 3–4 zile">Готово за 3–4 дня</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="extra-service-footer">
+            <div class="extra-service-price-row">
+              <span class="extra-service-price-label" data-ru="от" data-ro="de la">от</span>
+              <span class="extra-service-price-value">50 €</span>
+            </div>
+            <a href="#contact" class="btn btn-outline">
+              <span data-ru="Заказать" data-ro="Comandă">Заказать</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Print -->
+        <div class="glass-card extra-service-card animate-on-scroll" style="transition-delay: 0.15s;">
+          <div class="extra-service-icon-wrap">
+            <div class="icon-box" style="margin-bottom: 0;">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <rect x="3" y="6" width="20" height="14" rx="2" stroke="#6366F1" stroke-width="1.5" />
+                <path d="M7 10h12M7 13h8M7 16h5" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M18 3v3M8 3v3" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="extra-service-badge" data-ru="Печать" data-ro="Print">Печать</div>
+          </div>
+
+          <div class="extra-service-body">
+            <h3 class="extra-service-title" data-ru="Макеты печатной продукции"
+              data-ro="Machete pentru materiale tipărite">Макеты печатной продукции</h3>
+            <p class="extra-service-text"
+              data-ru="Профессиональные макеты под печать: визитки, флаеры и баннеры в нужных размерах с цветовым профилем CMYK."
+              data-ro="Machete profesionale pentru tipărire: cărți de vizită, fluturași și bannere în dimensiunile necesare cu profilul de culoare CMYK.">
+              Профессиональные макеты под печать: визитки, флаеры и баннеры в нужных размерах с цветовым профилем CMYK.
+            </p>
+
+            <ul class="extra-service-features">
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="Визитки двусторонние" data-ro="Cărți de vizită față-verso">Визитки двусторонние</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="Флаеры A5 / A6" data-ro="Fluturași A5 / A6">Флаеры A5 / A6</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="Баннеры любых форматов" data-ro="Bannere în orice format">Баннеры любых форматов</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4L3.5 6.5L9 1" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></span>
+                <span data-ru="CMYK + PDF под типографию" data-ro="CMYK + PDF pentru tipografie">CMYK + PDF под
+                  типографию</span>
+              </li>
+            </ul>
+
+            <!-- Print type tags -->
+            <div class="extra-service-tags">
+              <span class="card-tag" data-ru="Визитки" data-ro="Cărți de vizită">Визитки</span>
+              <span class="card-tag" data-ru="Флаеры" data-ro="Fluturași">Флаеры</span>
+              <span class="card-tag" data-ru="Баннеры" data-ro="Bannere">Баннеры</span>
+            </div>
+          </div>
+
+          <div class="extra-service-footer">
+            <div class="extra-service-price-row">
+              <span class="extra-service-price-label" data-ru="от" data-ro="de la">от</span>
+              <span class="extra-service-price-value">30 €</span>
+            </div>
+            <a href="#contact" class="btn btn-outline">
+              <span data-ru="Заказать" data-ro="Comandă">Заказать</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================  CONTACT  ============================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="grid-2">
+
+        <!-- Left: contact info -->
+        <div>
+          <div class="section-label contact-info-label">
+            <span class="section-label-dot"></span>
+            <span data-ru="Контакт" data-ro="Contact">Контакт</span>
+          </div>
+          <h2 class="contact-info-title" data-ru="Обсудим ваш проект" data-ro="Să discutăm proiectul dvs.">Обсудим ваш
+            проект</h2>
+          <p class="contact-info-text"
+            data-ru="Оставьте заявку — отвечу в течение 30 минут. Работаю в Кишиневе, но беру проекты из любой точки Молдовы и не только."
+            data-ro="Lăsați o cerere — voi răspunde în 30 de minute. Lucrez în Chișinău, dar accept proiecte din orice parte a Moldovei și nu numai.">
+            Оставьте заявку — отвечу в течение 30 минут. Работаю в Кишиневе, но беру проекты из любой точки Молдовы и не
+            только.
+          </p>
+
+          <a href="https://t.me/your_username" class="glass-card messenger-link">
+            <div class="messenger-link-icon messenger-link-icon--telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#2AABEE">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.02 9.54c-.15.67-.54.84-1.09.52l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.03 5.52-4.99c.24-.21-.05-.33-.37-.12L7.08 14.3l-2.96-.92c-.64-.2-.65-.64.14-.95l11.56-4.46c.53-.19.99.13.82.22h-.7z" />
+              </svg>
+            </div>
+            <div>
+              <div class="messenger-link-name">Telegram</div>
+              <div class="messenger-link-handle">@your_username</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/37360000000" class="glass-card messenger-link">
+            <div class="messenger-link-icon messenger-link-icon--whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.1 1.51 5.83L0 24l6.3-1.49A11.96 11.96 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm6.14 16.48c-.26.73-1.5 1.39-2.08 1.47-.53.08-1.2.11-1.93-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.12-4.46-5.27-4.67-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.2 1.05-2.5.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.26.6.87 2.13.95 2.28.08.15.13.33.03.53-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.14-.3.3-.13.59.17.28.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.3.15.47.12.64-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.77.83 2.07.98.3.15.5.22.57.35.08.12.08.72-.18 1.45z" />
+              </svg>
+            </div>
+            <div>
+              <div class="messenger-link-name">WhatsApp</div>
+              <div class="messenger-link-handle">+373 60 000 000</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right: form -->
+        <div class="glass-card contact-form-card">
+          <h3 class="contact-form-title" data-ru="Оставить заявку" data-ro="Lasă o cerere">Оставить заявку</h3>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+
+            <div class="form-group">
+              <label class="form-label" data-ru="ИМЯ" data-ro="NUME">ИМЯ</label>
+              <input id="fieldName" type="text" class="form-input" data-ru="Ваше имя" data-ro="Numele dvs."
+                placeholder="Ваше имя" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-ru="ТЕЛЕФОН" data-ro="TELEFON">ТЕЛЕФОН</label>
+              <input id="fieldPhone" type="tel" class="form-input" placeholder="+373 XX XXX XXX" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-ru="УДОБНЫЙ МЕССЕНДЖЕР" data-ro="MESAGERUL PREFERAT">УДОБНЫЙ
+                МЕССЕНДЖЕР</label>
+              <div class="messenger-chips">
+                <button type="button" class="messenger-chip" data-messenger="Telegram" onclick="selectMessenger(this)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.02 9.54c-.15.67-.54.84-1.09.52l-3-2.21-1.45 1.39c-.16.16-.3.3-.61.3l.21-3.03 5.52-4.99c.24-.21-.05-.33-.37-.12L7.08 14.3l-2.96-.92c-.64-.2-.65-.64.14-.95l11.56-4.46c.53-.19.99.13.82.22h-.7z" />
+                  </svg>
+                  Telegram
+                </button>
+                <button type="button" class="messenger-chip" data-messenger="WhatsApp" onclick="selectMessenger(this)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.1 1.51 5.83L0 24l6.3-1.49A11.96 11.96 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm6.14 16.48c-.26.73-1.5 1.39-2.08 1.47-.53.08-1.2.11-1.93-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.12-4.46-5.27-4.67-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.2 1.05-2.5.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.26.6.87 2.13.95 2.28.08.15.13.33.03.53-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.14-.3.3-.13.59.17.28.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.3.15.47.12.64-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.77.83 2.07.98.3.15.5.22.57.35.08.12.08.72-.18 1.45z" />
+                  </svg>
+                  WhatsApp
+                </button>
+                <button type="button" class="messenger-chip" data-messenger="Viber" onclick="selectMessenger(this)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#7360F2">
+                    <path
+                      d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z" />
+                  </svg>
+                  Viber
+                </button>
+              </div>
+              <input type="hidden" id="selectedMessenger" value="" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full form-submit-btn">
+              <span data-ru="Отправить заявку →" data-ro="Trimite cererea →">Отправить заявку →</span>
+            </button>
+
+          </form>
+
+          <p class="form-privacy-note" data-ru="Нажимая кнопку, вы соглашаетесь на обработку персональных данных"
+            data-ro="Apăsând butonul, sunteți de acord cu prelucrarea datelor personale">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================  FOOTER  ============================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M3 12L7 4L11 9L13 6" stroke="white" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <span class="logo-text">dev<span>.</span>md</span>
+      </div>
+
+      <p class="footer-copyright" data-ru="© 2025 Web Developer Кишинев. Все права защищены."
+        data-ro="© 2025 Web Developer Chișinău. Toate drepturile rezervate.">
+        © 2025 Web Developer Кишинев. Все права защищены.
+      </p>
+
+      <div class="footer-heart">
+        <span data-ru="Сделано с" data-ro="Creat cu">Сделано с</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#6366F1">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span data-ru="в Молдове" data-ro="în Moldova">в Молдове</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
