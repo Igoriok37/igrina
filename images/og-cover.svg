@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E17"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="50%" style="stop-color:#a5b4fc"/>
+      <stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="40" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <clipPath id="rounded">
+      <rect width="1200" height="630" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Glow blobs -->
+  <circle cx="1050" cy="120" r="280" fill="#6366F1" opacity="0.07" filter="url(#glow)"/>
+  <circle cx="150" cy="520" r="220" fill="#4F46E5" opacity="0.05" filter="url(#glow)"/>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1E293B" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1E293B" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#1E293B" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Logo icon -->
+  <rect x="80" y="72" width="52" height="52" rx="14" fill="#6366F1"/>
+  <path d="M93 108L101 84L109 96L114 89" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Logo text -->
+  <text x="148" y="108" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Igrina</text>
+
+  <!-- Location badge -->
+  <rect x="80" y="160" width="220" height="36" rx="18" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <circle cx="105" cy="178" r="5" fill="#6366F1"/>
+  <text x="120" y="183" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#a5b4fc" letter-spacing="1.5">КИШИНЕВ, МОЛДОВА</text>
+
+  <!-- Main headline -->
+  <text x="80" y="290" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900" fill="url(#textGrad)" letter-spacing="-1">Ультрабыстрые сайты</text>
+  <text x="80" y="366" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">на чистом коде.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="430" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400" fill="#94A3B8">Разработка без конструкторов · Хостинг бесплатно навсегда</text>
+
+  <!-- Price tags -->
+  <rect x="80" y="480" width="160" height="56" rx="12" fill="rgba(255,255,255,0.04)" stroke="#1E293B" stroke-width="1"/>
+  <text x="160" y="504" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">СТАРТ</text>
+  <text x="160" y="526" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">от 100 €</text>
+
+  <rect x="256" y="480" width="160" height="56" rx="12" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
+  <text x="336" y="504" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#a5b4fc" text-anchor="middle" letter-spacing="1">POPULAR</text>
+  <text x="336" y="526" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">от 150 €</text>
+
+  <rect x="432" y="480" width="160" height="56" rx="12" fill="rgba(255,255,255,0.04)" stroke="#1E293B" stroke-width="1"/>
+  <text x="512" y="504" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">МАГАЗИН</text>
+  <text x="512" y="526" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">от 200 €</text>
+
+  <!-- Right side: stats -->
+  <rect x="780" y="220" width="340" height="190" rx="16" fill="rgba(255,255,255,0.02)" stroke="#1E293B" stroke-width="1"/>
+
+  <text x="950" y="270" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8" text-anchor="middle" letter-spacing="1">ПОЧЕМУ IGRINA</text>
+
+  <!-- Stat 1 -->
+  <text x="870" y="330" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900" fill="#ffffff" text-anchor="middle">50+</text>
+  <text x="870" y="355" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle">Проектов</text>
+
+  <!-- Stat 2 -->
+  <text x="950" y="330" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900" fill="#6366F1" text-anchor="middle">100</text>
+  <text x="950" y="355" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle">Google Speed</text>
+
+  <!-- Stat 3 -->
+  <text x="1030" y="330" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900" fill="#ffffff" text-anchor="middle">3+</text>
+  <text x="1030" y="355" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle">Года опыта</text>
+
+  <!-- Divider -->
+  <line x1="820" y1="380" x2="1080" y2="380" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Free hosting note -->
+  <circle cx="838" cy="400" r="4" fill="#6366F1"/>
+  <text x="852" y="405" font-family="Inter, Arial, sans-serif" font-size="14" fill="#94A3B8">Хостинг 0 леев/месяц</text>
+
+  <!-- Bottom border accent -->
+  <rect x="0" y="622" width="1200" height="8" rx="0" fill="url(#textGrad)" opacity="0.6"/>
+</svg>
