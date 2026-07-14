@@ -112,39 +112,30 @@ function handleSubmit(e) {
 }
 
 // ---- Отправка данных через прокси-воркер (токен бота там, не в этом файле) ----
-const FORM_ENDPOINT = "https://webonix-form.igorok7312.workers.dev"; 
-  
+const FORM_ENDPOINT = "https://webonix-form.igorok7312.workers.dev";
+
+function sendToTelegram() {
   // Сбор данных из полей
   const name = document.getElementById('fieldName').value.trim();
   const phone = document.getElementById('fieldPhone').value.trim();
   const messenger = document.getElementById('selectedMessenger').value;
-  
-  // Формируем текст
-  const text = `🎯 <b>Новая заявка с сайта!</b>\n\n` +
-               `👤 <b>Имя:</b> ${name}\n` +
-               `📞 <b>Телефон:</b> ${phone}\n` +
-               `💬 <b>Удобный мессенджер:</b> ${messenger}`;
 
   // Блокируем кнопку на время отправки
   const submitBtn = document.querySelector('.form-submit-btn');
   submitBtn.disabled = true;
   submitBtn.style.opacity = "0.7";
 
-  // ХИТРЫЙ ХАК: собираем реальный URL из кусочков, чтобы он не урезался
-  const protocol = "https://";
-  const domain = "api.telegram.org";
-  const fullUrl = protocol + domain + "/bot" + botToken + "/sendMessage";
-
-  // Отправляем запрос
-  fetch(fullUrl, {
+  // Отправляем запрос на воркер — он сам добавит токен и перешлёт в Telegram
+  fetch(FORM_ENDPOINT, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-          chat_id: chatId,
-          text: text,
-          parse_mode: 'HTML'
+          name: name,
+          phone: phone,
+          messenger: messenger,
+          page: document.title
       })
   })
   .then(response => {
@@ -156,12 +147,12 @@ const FORM_ENDPOINT = "https://webonix-form.igorok7312.workers.dev";
           // Показываем красивую модалку вместо alert
           openModal();
       } else {
-          alert('Telegram отклонил запрос. Проверьте, нажали ли вы СТАРТ в боте @igorok_md_bot.');
+          alert('Заявка не отправилась. Попробуйте ещё раз чуть позже.');
       }
   })
   .catch(error => {
       console.error('Error details:', error);
-      alert('Ошибка соединения. Проверьте правильность URL или интернет.');
+      alert('Ошибка соединения. Проверьте интернет.');
   })
   .finally(() => {
       // Возвращаем кнопку в активное состояние
