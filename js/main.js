@@ -111,11 +111,8 @@ function handleSubmit(e) {
   }
 }
 
-// ---- НОВАЯ ФУНКЦИЯ: Отправка данных в Telegram ----
-function sendToTelegram() {
-  // Ключи для интеграции
-  const botToken = "8750741879:AAG7NKxY_Mn7dE5XLuWWpETH2X3syS1JKtI";
-  const chatId = "5109827733"; 
+// ---- Отправка данных через прокси-воркер (токен бота там, не в этом файле) ----
+const FORM_ENDPOINT = "https://webonix-form.igorok7312.workers.dev"; 
   
   // Сбор данных из полей
   const name = document.getElementById('fieldName').value.trim();
